@@ -5,12 +5,4 @@ export const NAV_ITEMS = [
     name: "المنتجات الرئيسية",
     link: "#products",
   },
-  {
-    name: "المساعدات",
-    link: "#help",
-  },
-  {
-    name: "خطط المستقبل",
-    link: "#future",
-  },
 ];
