@@ -4,7 +4,6 @@ import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import Logo from "./Logo";
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -75,41 +74,46 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          // change rounded-full to rounded-lg
-          // remove dark:border-white/[0.2] dark:bg-black bg-white border-transparent
-          // change  pr-2 pl-8 py-2 to px-10 py-5
-          "  bg-white  justify-between rounded-full lg:flex max-w-fit md:min-w-[100vw] lg:min-w-[90%] fixed z-[5000] top-10 inset-x-0 mx-auto px-6 py-3  border border-black/.1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center  space-x-4",
+          "  bg-white   justify-between flex px-12  mx-auto py-3  items-center shadow-sm space-x-4",
           className
         )}
-        style={{
-          backdropFilter: "blur(16px) saturate(180%)",
-
-          borderRadius: "12px",
-          border: "1px solid rgba(255, 255, 255, 0.125)",
-        }}
       >
-        <div className="flex items-center gap-2">
-          <button className=" lg:block hidden py-1.5 mr-5 px-3 bg-orange-600 text-white text-sm rounded-full ">تواصل معنا</button>
-       <Logo className=" hidden lg:block "/>
+        <div className="flex items-center gap-2 ">
+
+          <button className=" lg:block hidden py-2 mr-5 px-6  bg-[#01A101] text-white text-xl rounded-full ">تواصل معنا</button>
         </div>
-        <div className="flex items-center gap-5">
+
+        <div className="flex items-center gap-8">
+
           {navItems.map((navItem: any, idx: number) => (
             <Link
               key={`link=${idx}`}
               href={navItem.link}
               className={cn(
-                "relative lg:flex text-xs lg:text-base dark:text-neutral-50 items-center    space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+                "relative lg:flex text-xl  dark:text-neutral-50 items-center    space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
               )}
             >
               <span className="block sm:hidden">{navItem.icon}</span>
               {/* add !cursor-pointer */}
               {/* remove hidden sm:block for the mobile responsive */}
-              <span className=" text-sm !cursor-pointer">{navItem.name}</span>
+              <span className=" text-xl !cursor-pointer">{navItem.name}</span>
             </Link>
           ))}
         </div>
+         <div className="flex justify-start items-center">
+        <div>
+        <h1 className="text-sm font-semibold text-[#000383]">
+         شركة المصنع السعودي لقطع غيار السيارات 
+         </h1>
+         <h1 className="text-sm font-semibold text-[#000383] ml-6">
+         Saudi Factory for Auto Parts Company
+         </h1>
+        </div>
+         <Image src="/LOGO.JPEG" className="w-24 h-[80px]" width={100} height={100} alt="logo"  />  
+         </div>
+
         {/* remove this login btn */}
-        {/* <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
+        {/* <button className="border text-lg font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
           <span>Login</span>
           <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
         </button> */}

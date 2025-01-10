@@ -20,7 +20,7 @@ const ParagraphWrite = ({ text }: { text: string }) => {
       variants={containerVariants}
       initial="initial"
       whileInView="animate"
-      className="flex flex-row-reverse flex-wrap items-center max-w-4xl mx-auto lg:text-xl text-xl"
+      className="flex flex-row flex-wrap items-center max-w-4xl mx-auto lg:text-xl text-xl"
     >
       {text.split(" ").map((word, index) => (
         <motion.span variants={childVariants} key={index} className="inline-block  mr-2">

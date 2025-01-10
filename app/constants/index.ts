@@ -1,8 +1,9 @@
 export const NAV_ITEMS = [
-  { name: "من نحن ؟", link: "#about" },
-  { name: "بم نؤمن ؟", link: "#services" },
+  { name: "خدماتنا", link: "#about" },
+  { name: "من نحن ", link: "#about" },
+  { name: "جميع المنتجات ", link: "#about" },
   {
-    name: "المنتجات الرئيسية",
-    link: "#products",
+    name: "الرئيسية",
+    link: "/",
   },
 ];

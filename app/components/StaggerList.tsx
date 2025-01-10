@@ -25,7 +25,7 @@ const StaggerList = ({ list, text, children }: { list: string[]; text: string; c
         {" "}
         {text.split("<b>")[0]}
         <b className=" font-bold text-2xl"> {text.split("<b>")[1]}</b>
-        <span className=" absolute -bottom-2 right-0 w-24 h-[1px] bg-orange-500"></span>
+        <span className=" absolute -bottom-2 right-0 w-24 h-[1px] bg-[#01A101]"></span>
       </motion.h2>
       {children}
       <motion.ul variants={containerVariants} initial="initial" whileInView="animate" className="  flex-col gap-2 flex">

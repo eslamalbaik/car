@@ -111,14 +111,14 @@ const SwiperCards = ({
         <div className=" flex mb-4 items-center gap-20  md:gap-10 justify-between lg:justify-center  mt-5 ">
           <button
             onClick={() => swiper?.slidePrev()}
-            className={`rounded-full  absolute left-0 lg:-left-20 top-1/2  -translate-y-1/2 z-50 flex px-6 py-4 items-center  border  border-main  bg-orange-500 text-white
+            className={`rounded-full  absolute left-0 lg:-left-20 top-1/2  -translate-y-1/2 z-50 flex px-6 py-4 items-center  border  border-main  bg-[#01A101] text-white
                text-main duration-150 hover:text-white hover:bg-main `}
           >
             <ArrowLeft className="mr-1" />
           </button>
           <button
             onClick={() => swiper?.slideNext()}
-            className={` rounded-full  absolute right-0 lg:-right-20 top-1/2  -translate-y-1/2 z-50  flex px-6 py-4 items-center  border border-main  bg-orange-500 text-white
+            className={` rounded-full  absolute right-0 lg:-right-20 top-1/2  -translate-y-1/2 z-50  flex px-6 py-4 items-center  border border-main  bg-[#01A101] text-white
                text-main duration-150 hover:text-white hover:bg-main`}
           >
             <ArrowRight />
