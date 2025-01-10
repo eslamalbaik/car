@@ -1,7 +1,5 @@
 import React from "react";
-import MaxWidthWrapper from "./defaults/MaxWidthWrapper";
 import GridContainer from "./GridContainer";
-import Logo from "./Logo";
 import Image from "next/image";
 import Link from "next/link";
 

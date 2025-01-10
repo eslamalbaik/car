@@ -90,11 +90,12 @@ const MotionContainer = ({
       viewport={{ once: true }}
       whileInView="visible"
     >
-      {childrenArray.map((child, index) =>
-        cloneElement(child, {
-          variants: staggerEffect(index),
-        })
-      )}
+     {childrenArray.map((child, index) =>
+  React.cloneElement(child as React.ReactElement<{ variants?: any }>, {
+    variants: staggerEffect(index),
+  })
+)}
+
     </motion.div>
   );
 };
