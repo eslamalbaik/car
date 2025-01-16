@@ -35,38 +35,35 @@ export default function Home() {
           <source src="/assets/vedio2.mp4" type="video/mp4"></source>
         </video>
         </div>
-      <div id="aboutus" className=" bg-gray-50 py-8">
-        <MaxWidthWrapper sectionId="about" className="flex flex-row-reverse gap-20  items-center justify-between">
-          <div className="flex flex-col items-start gap-4">
-            <StaggerList
-              text="من <b>نحن ؟"
-              list={[
-                `تؤمن الشركة بأن النمو يأتي من خلال رضا العملاء وقد وضعنا أهدافنا لتوفير منتج ذي قيمة مضافة لعملائنا .`,
-                ` وتلبية احتياجاتهم من خلال التركيز على "الجودة والتكنولوجيا والابتكار وخدمة العملاء.`
-              ]}
-            >
-              <Paragraph
-                size="lg"
-                className=" ml-auto text-2xl lg:text-4xl"
-                description="شركة المصنع السعودي لغيار السيارات"
-              />
-            </StaggerList>
-            <button className=" ml-auto rounded-2xl w-fit py-2 px-4 bg-[#01A101] text-white">
-              تواصل معنا
-            </button>
-          </div>
+        <div id="aboutus" className="bg-gray-50 py-8">
+  <MaxWidthWrapper
+    sectionId="about"
+    className="flex flex-col-reverse lg:flex-row-reverse gap-8 lg:gap-20 items-center justify-between"
+  >
+    <div className="flex flex-col items-start gap-4 w-full lg:w-1/2">
+      <StaggerList
+        text="من <b>نحن ؟"
+        list={[
+          `تؤمن الشركة بأن النمو يأتي من خلال رضا العملاء وقد وضعنا أهدافنا لتوفير منتج ذي قيمة مضافة لعملائنا .`,
+          `وتلبية احتياجاتهم من خلال التركيز على "الجودة والتكنولوجيا والابتكار وخدمة العملاء."`,
+        ]}
+      >
+        <Paragraph
+          size="lg"
+          className="ml-auto text-xl md:text-2xl lg:text-4xl"
+          description="شركة المصنع السعودي لقطع غيار السيارات"
+        />
+      </StaggerList>
+      <button className="ml-auto rounded-2xl w-fit py-2 px-4 bg-[#01A101] text-white">
+        تواصل معنا
+      </button>
+    </div>
 
-          <MotionItem
-            initial={{ x: -300 }}
-            whileInView={{ x: 0 }}
-            nohover
-            className="  rounded-2xl overflow-hidden h-64 w-[30%] relative"
-          >
-            <Image src={"/LOGO.jpeg"} className="  " alt="logo" fill />
-          </MotionItem>
-        </MaxWidthWrapper>
-        <OurMission/>
-      </div>
+  
+      <Image src={"/LOGO.jpeg"} className="" width={250} height={250} alt="logo"  />
+  </MaxWidthWrapper>
+  <OurMission />
+</div>
 
       <MaxWidthWrapper sectionId="services" className="flex flex-col gap-5 items-center  text-center">
         <Heading text="الموردين الرئيسيين" />
@@ -75,7 +72,7 @@ export default function Home() {
         />
         <MaxWidthWrapper>
           <GridContainer cols={4}>
-            <div className="flex flex-col items-center gap-3">
+            <div className="flex flex-col  items-center gap-3">
               <div className=" py-3 px-4 rounded-2xl w-52 h-52 relative">
                 <Image src={"/SABIC_2093.png"} className=" object-contain " alt="logo" fill />
               </div>

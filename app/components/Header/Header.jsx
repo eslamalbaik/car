@@ -63,7 +63,7 @@ function Header() {
               </Link>
             </li>
             <li className=" text-lg text-gray-500 py-2 px-3 text-center  md:border-b-0  hover:text-first hover:border-b-2 hover:border-first  ">
-              <Link href="/#aboutus">من نحن</Link>
+              <Link href="/aboutus">من نحن</Link>
             </li>
             <li className=" text-lg text-gray-500 py-2 px-3 text-center  hover:border-b-2 hover:border-first  md:border-b-0 md:hover:text-first ">
               <Link href="/#products">جميع المنتجات</Link>

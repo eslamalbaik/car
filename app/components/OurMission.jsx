@@ -13,7 +13,6 @@ const OurMission = () => {
     <GridContainer cols={3}>
     <div className="flex flex-col items-center gap-3 bg-white rounded-lg shadow-sm p-4">
     <div className="flex flex-col gap-1 items-center">
-          {/* <h3 className=" lg:text-2xl text-xl italic">OUR</h3> */}
           <h2 className=" lg:text-4xl font-bold text-2xl text-[#01A101]">الرؤية </h2>
        <br />
           <Icon1 />
