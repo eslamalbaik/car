@@ -1,16 +1,10 @@
 import Image from "next/image";
-import { FloatingNav } from "./components/NavBar";
-import { NAV_ITEMS } from "./constants";
 import MaxWidthWrapper from "./components/defaults/MaxWidthWrapper";
-import TextReveal from "./components/TextReveal";
-import MotionItem from "./components/defaults/MotionItem";
 import StaggerList from "./components/StaggerList";
 import ParagraphWrite from "./components/ParagraphWrite";
-import { AnimatedTestimonialsDemo } from "./components/AnimatedTestimonials";
 import SwiperCards from "./components/defaults/SwiperCards";
 import Paragraph from "./components/defaults/Paragraph";
 import GridContainer from "./components/GridContainer";
-import Icon1 from "./components/Icon1";
 import Heading from "./components/defaults/Heading";
 import Footer from "./components/Footer";
 import Header from "./components/Header/Header";
@@ -20,7 +14,6 @@ import Contact from "./components/Contact";
 export default function Home() {
   return (
     <main className=" bg-white ">
-      {/* <FloatingNav navItems={NAV_ITEMS} /> */}
       <Header/>
       {/* <Nav/> */}
       <div className=" ">
@@ -29,8 +22,7 @@ export default function Home() {
           loop
           muted
           playsInline
-          className="w-full  h-screen lg:h-[700px] object-cover"
-          // style={{ backgroundSize: "cover" }}
+          className="w-full  h-screen lg:h-[500px] object-cover"
         >
           <source src="/assets/vedio2.mp4" type="video/mp4"></source>
         </video>
@@ -62,9 +54,46 @@ export default function Home() {
   
       <Image src={"/LOGO.jpeg"} className="" width={250} height={250} alt="logo"  />
   </MaxWidthWrapper>
-  <OurMission />
 </div>
 
+   
+      <div id="products" className=" bg-gray-50">
+
+      <MaxWidthWrapper className="flex  overflow-hidden  items-center flex-col gap-4">
+      {/* <Heading text="جميع المنتجات" /> */}
+        {/* <ParagraphWrite
+          text={"نحن نوفر قطع الغيار السيارات  تغطي منتجات هذه المصانع مجموعة واسعة من الأجزاء والملحقات  "}
+        /> */}
+        <br />
+          <SwiperCards
+            btns
+            autoplay
+            slidesPerView={3}
+            items={[
+              { image: "/pc/1.webp", name: "صدامات السيارات" },
+              { image: "/pc/2.jpg", name: "الهوايات" },
+              { image: "/pc/3.png", name: "النسافات" },
+              { image: "/pc/4.webp", name: "مصابيح الانارة" },
+              { image: "/pc/5.webp", name: "الهوايات" },
+              { image: "/pc/6.jpeg", name: "لوحات" },
+            ].map((item) => {
+              return {
+                card: (
+                  <div className=" flex-col rounded-2xl items-center flex overflow-hidden bg-white">
+                    <div className=" py-3 px-6 flex items-center flex-col gap-5">
+                      <h3 className=" font-extrabold text-gray-700">{item.name}</h3>
+                    </div>{" "}
+                    <div className="  rounded-full  relative w-80 h-80  ">
+                      <Image src={item.image} className=" object-contain object-center " alt="logo" fill />
+                    </div>
+                  </div>
+                ),
+              };
+            })}
+          />
+        </MaxWidthWrapper>
+     
+      </div>
       <MaxWidthWrapper sectionId="services" className="flex flex-col gap-5 items-center  text-center">
         <Heading text="الموردين الرئيسيين" />
         <ParagraphWrite
@@ -114,44 +143,7 @@ export default function Home() {
             </div>
           </GridContainer>
         </MaxWidthWrapper>
-      </MaxWidthWrapper>
-      <div id="products" className=" bg-gray-50">
-
-      <MaxWidthWrapper className="flex  overflow-hidden  items-center flex-col gap-4">
-      <Heading text="جميع المنتجات" />
-        <ParagraphWrite
-          text={"نحن نوفر قطع الغيار السيارات  تغطي منتجات هذه المصانع مجموعة واسعة من الأجزاء والملحقات  "}
-        />
-        <br />
-          <SwiperCards
-            btns
-            autoplay
-            slidesPerView={3}
-            items={[
-              { image: "/pc/1.webp", name: "صدامات السيارات" },
-              { image: "/pc/2.jpg", name: "الهوايات" },
-              { image: "/pc/3.png", name: "النسافات" },
-              { image: "/pc/4.webp", name: "مصابيح الانارة" },
-              { image: "/pc/5.webp", name: "الهوايات" },
-              { image: "/pc/6.jpeg", name: "لوحات" },
-            ].map((item) => {
-              return {
-                card: (
-                  <div className=" flex-col rounded-2xl items-center flex overflow-hidden bg-white">
-                    <div className=" py-3 px-6 flex items-center flex-col gap-5">
-                      <h3 className=" font-extrabold text-gray-700">{item.name}</h3>
-                    </div>{" "}
-                    <div className="  rounded-full  relative w-80 h-80  ">
-                      <Image src={item.image} className=" object-contain object-center " alt="logo" fill />
-                    </div>
-                  </div>
-                ),
-              };
-            })}
-          />
-        </MaxWidthWrapper>
-     
-      </div>
+      </MaxWidthWrapper> 
       <Contact/>
       <Footer />
     </main>

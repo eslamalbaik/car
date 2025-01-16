@@ -7,7 +7,7 @@ import Image from "next/image";
 function Header() {
   const [navbar, setNavbar] = useState(false);
   return (
-    <nav className="w-full lg:px-12 py-4  lg:justify-between  flex-row  items-center mx-auto   md:items-center md:flex ">
+    <nav className="w-full bg-white lg:px-12 py-4  lg:justify-between  flex-row  items-center mx-auto   md:items-center md:flex ">
           <div className="flex justify-around  items-center md:flex ">
 
            {/* LOGO */}

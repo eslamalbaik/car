@@ -5,7 +5,7 @@ import OurMission from '../components/OurMission'
 
 const page = () => {
   return (
-    <div>
+    <div className='bg-[#EDEDED]'>
         <Header/>
         <br />
         <br />
