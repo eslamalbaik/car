@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import MaxWidthWrapper from "./components/defaults/MaxWidthWrapper";
 import StaggerList from "./components/StaggerList";
@@ -8,10 +9,33 @@ import GridContainer from "./components/GridContainer";
 import Heading from "./components/defaults/Heading";
 import Footer from "./components/Footer";
 import Header from "./components/Header/Header";
-import OurMission from "./components/OurMission";
+import Loader from "./components/Loader";
 import Contact from "./components/Contact";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(() => {
+    // Check if we've shown the splash screen before
+    if (typeof window !== 'undefined') {
+      return !localStorage.getItem('splashScreenShown');
+    }
+    return true;
+  });
+
+  useEffect(() => {
+    if (isLoading) {
+      setTimeout(() => {
+        setIsLoading(false);
+        // Mark that we've shown the splash screen
+        localStorage.setItem('splashScreenShown', 'true');
+      }, 2000);
+    }
+  }, [isLoading]);
+
+  if (isLoading) {
+    return <Loader />;
+  }
+  
   return (
     <main className=" bg-white ">
       <Header/>
@@ -55,10 +79,7 @@ export default function Home() {
       <Image src={"/LOGO.jpeg"} className="" width={250} height={250} alt="logo"  />
   </MaxWidthWrapper>
 </div>
-
-   
       <div id="products" className=" bg-gray-50">
-
       <MaxWidthWrapper className="flex  overflow-hidden  items-center flex-col gap-4">
       {/* <Heading text="جميع المنتجات" /> */}
         {/* <ParagraphWrite
